@@ -1,0 +1,91 @@
+// Copy these keyboard shortcuts to your User settings in VSCode.
+// NOTE: The keybindings below won't work from this configuration location!
+// EXAMPLE for where this configuration belongs (on a mac): 
+// - "/Users/<username>/Library/Application Support/Code/User/keybindings.json"
+[
+    /////// session cmd ///////
+    {
+        "key": "cmd+ctrl+/",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "qdb-mysql session\u000D" }
+    },
+    {
+        "key": "cmd+ctrl+k",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "q ${file}:${lineNumber}\u000D" }
+    },
+    {
+        "key": "cmd+ctrl+l",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "q+ ${file}:${lineNumber}\u000D" }
+    },
+    {
+        "key": "cmd+ctrl+n",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "q ${file}\u000D" }
+    },
+    {
+        "key": "cmd+ctrl+m",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "q+ ${file}\u000D" }
+    },
+    // {
+    //     "key": "cmd+ctrl+p",
+    //     "command": "workbench.action.terminal.sendSequence",
+    //     "args": { "text": "raw:${selectedText}'\u000D" }
+    // },
+    /////// query cmd ///////
+    {
+        "key": "cmd+alt+ctrl+m",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "qdb-mysql query -f '${file}'\u000D" }
+    },
+    {
+        "key": "cmd+alt+ctrl+n",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "qdb-mysql query -f '${file}' -s\u000D" }
+    },
+    {
+        "key": "cmd+alt+ctrl+l",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "qdb-mysql query -f '${file}' -l ${lineNumber}\u000D" }
+    },
+    {
+        "key": "cmd+alt+ctrl+k",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "qdb-mysql query -f '${file}' -l ${lineNumber} -s\u000D" }
+    },
+    /////// generate cmd ///////
+    {
+        "key": "cmd+alt+ctrl+b",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "qdb-mysql generate -t blank -f " }
+    },
+    /////// config ENV ///////
+    {
+        "key": "cmd+alt+ctrl+d",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "configEnv local-vpn\u000D" }
+    },
+    {
+        "key": "cmd+alt+ctrl+u",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "configEnv uat\u000D" }
+    },
+    {
+        "key": "cmd+alt+ctrl+p",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "configEnv prod\u000D" }
+    },
+    {
+        "key": "cmd+alt+ctrl+shift+p",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "configEnv prod-writer\u000D" }
+    },
+    // /////// lambda test execute ///////
+    // {
+    //     "key": "cmd+alt+ctrl+t",
+    //     "command": "workbench.action.terminal.sendSequence",
+    //     "args": { "text": "cd ~/wmsight/metrc-initial-sync/v2/support; go test --run=\"TriggerLambdaCollection\" --timeout 99999s\u000D" }
+    // }
+]
